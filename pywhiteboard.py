@@ -5,9 +5,6 @@ from pymouse import PyMouse
 import os,re,pdb
 
 class ProcessProtocolXinput(protocol.ProcessProtocol):
-    def __init__(self, verses):
-        self.verses = verses
-        self.data = ""
     def connectionMade(self):
         print "connectionMade!"
     def outReceived(self, data):
@@ -38,7 +35,6 @@ class ProcessProtocolXinput(protocol.ProcessProtocol):
         #m.click(x_dim/2, y_dim/2, 1)
     def errReceived(self, data):
         print data
-        print "errReceived! with %d bytes!" % len(data)
     def inConnectionLost(self):
         pass
     def outConnectionLost(self):
