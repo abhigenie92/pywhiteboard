@@ -1,3 +1,4 @@
+#!/usr/bin/env python2.7
 from twisted.internet import protocol
 from twisted.internet import reactor
 from pymouse import PyMouse
