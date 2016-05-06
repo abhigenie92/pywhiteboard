@@ -31,9 +31,10 @@ Calibration can be done in one of the following ways:
 
 1. Using xinput-calibrator as described https://www.thefanclub.co.za/how-to/how-ubuntu-1204-touchscreen-calibration
 2. Using only xinput list <id>
-  a. run 
+
+  1. run 
     ```xinput list 14 ```
-  b. Click on four screen of the touchscreen/whiteboard and determine the corresponding values for xMin, xMax, yMin and yMax.
+  2. Click on four screen of the touchscreen/whiteboard and determine the corresponding values for xMin, xMax, yMin and yMax.
   
   As obvious, here xMin-refers to the leftmost coordinate and xMax to the rightmost. yMin- to the bottommost and yMax to the topmost.
 
