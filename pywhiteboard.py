@@ -48,7 +48,7 @@ class ProcessProtocolXinput(protocol.ProcessProtocol):
         print "quitting"
         reactor.stop()
 
-process_protocol_xinput_obj = ProcessProtocolXinput(1)
+process_protocol_xinput_obj = ProcessProtocolXinput()
 m = PyMouse()
 #if starts at 0,0 at top-left corner
 white_board_x=5000
