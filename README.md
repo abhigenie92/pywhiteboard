@@ -9,11 +9,10 @@ $ python -m pip install PyUserInput==0.1.9
 
 Finding and Specify the Device
 ------------
-1.
+1.  Note the id number of the device.
   ````
   $ xinput list
   ```
-  Note the id number of the device.
   
   For example:
   ```
@@ -22,5 +21,4 @@ Finding and Specify the Device
   ```
   id number is 14 in the above case.
 
-2.
-Modify the correct id in code (https://github.com/abhigenie92/pywhiteboard/blob/master/pywhiteboard.py#L58)
+2. Modify the correct id in code (https://github.com/abhigenie92/pywhiteboard/blob/master/pywhiteboard.py#L58)
