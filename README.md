@@ -7,7 +7,7 @@ $ sudo apt-get python-twisted python-xlib
 $ python -m pip install PyUserInput==0.1.9
 ```
 
-Finding Device
+Finding and Specify the Device
 ------------
 ```
 $ xinput list
@@ -20,3 +20,5 @@ abhishek@vaio:~/dev_work/whiteboard/device_info$ xinput list | grep Hite
 ⎜   ↳ Hite Board-XXXXXXXX                       id=14   [slave  pointer  (2)]
 ```
 id number is 14 in the above case.
+
+Modify the correct id in code (https://github.com/abhigenie92/pywhiteboard/blob/master/pywhiteboard.py#L58)
