@@ -1,5 +1,5 @@
 # pywhiteboard
-
+Whiteboard software for linux.
 Installation
 ------------
 ```
