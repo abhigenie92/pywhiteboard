@@ -23,8 +23,9 @@ class ProcessProtocolXinput(protocol.ProcessProtocol):
                 # transform the x and y coordinates
                 raw_x=matchObj_x.group(1)
                 xcor=int(round((float(raw_x)/float(white_board_x)) * x_screen))
+                # xcor=int(round((float(raw_x-white_board_x_min)/float(white_board_x_diff)) * x_screen))
                 raw_y=matchObj_y.group(1)
-                ycor=int(round((float(raw_y)/float(white_board_y)) * y_screen))
+                ycor=int(round((float(raw_y)/float(white_board_y)) * y_screen)) 
                 print(xcor,ycor)
             if matchObj_x:
                 raw_x=matchObj_x.group(1)
@@ -53,8 +54,16 @@ class ProcessProtocolXinput(protocol.ProcessProtocol):
 
 process_protocol_xinput_obj = ProcessProtocolXinput(1)
 m = PyMouse()
+#if starts at 0,0 at top-left corner
 white_board_x=5000
 white_board_y=5000
+#else
+white_board_x_min=250
+white_board_x_max=500
+white_board_x_diff=white_board_x_max-white_board_x_min
+white_board_y_min=250
+white_board_y_max=500
+white_board_y_diff=white_board_y_max-white_board_y_min
 x_screen, y_screen = m.screen_size()
 reactor.spawnProcess(process_protocol_xinput_obj, "xinput", ["xinput","test","14"], env=None)
 reactor.run()
