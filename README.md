@@ -30,5 +30,5 @@ Calibrate the Device
 Run
 ---
 ```
-$ python
+$ python pywhiteboard.py
 ```
